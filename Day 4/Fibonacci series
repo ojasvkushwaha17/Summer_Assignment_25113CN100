@@ -1,0 +1,16 @@
+#include<stdio.h>
+int main()
+{
+    int n, num1=0,num2=1,nextnum, i;
+    printf("Enter the number till which you want to print the Fibonacci series: ");
+    scanf("%d",&n);
+    printf("The FIbonacci Series is:%d %d", num1, num2);
+    for(i=3;i<=n;i++)
+    {
+        nextnum=num1+num2;
+        printf(" %d", nextnum);
+        num1=num2;
+        num2=nextnum;
+    }
+    return 0;
+}
