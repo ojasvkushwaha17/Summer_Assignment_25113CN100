@@ -1,0 +1,44 @@
+#include<stdio.h>
+#include<math.h>
+
+    int Armstrong(int num)
+    {
+        int originalnum=num;
+        int sum=0;
+        int digits=0;
+        
+        int temp=num;
+        while(temp>0)
+        {
+            temp=temp/10;
+            digits++;
+        }
+        
+        temp=num;
+        while(temp>0)
+        {
+            int rem=temp%10;
+            sum=sum+pow(rem, digits);
+            temp=temp/10;
+        }
+        return (sum==originalnum);
+    }
+    
+int main()
+    {
+        int beg, end;
+        printf("Enter the starting number: ");
+        scanf("%d", &beg);
+        printf("Enter the ending number: ");
+        scanf("%d", &end);
+        printf("armstrong numbers between %d and %d are: ", beg, end);
+        for(int i=beg; i<=end; i++)
+        {
+            if (Armstrong(i))
+            {
+                printf("%d,\t", i);
+            }    
+        }
+        printf("\n");
+        return 0;
+    }
