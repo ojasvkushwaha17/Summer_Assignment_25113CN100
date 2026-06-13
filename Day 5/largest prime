@@ -1,0 +1,32 @@
+#include <stdio.h>
+int main()
+{
+    long i, num, largest=-1;
+    printf("enter a number: ");
+    scanf("%ld", &num);
+    
+    //for 2
+    while(num%2==0)
+    {
+        largest=2;
+        num=num/2;
+    }
+    
+    //for odd prime factors
+    for(i=3; i<=num; i+2)
+    {
+        while(num%i==0)
+        {
+            largest=i;
+            num=num/i;
+        }
+    }
+    
+    //if no factor found, the number is prime.
+    if(largest== -1)
+    {
+        largest=num;
+    }
+    printf("largest prime factor is: %ld\n", largest);
+    return 0;
+}
