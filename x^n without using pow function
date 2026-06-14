@@ -1,0 +1,15 @@
+#include<stdio.h>
+int main()
+{
+    int i, num, n, temp=1;
+    printf("enter a number: ");
+    scanf("%d", &num);
+    printf("enter power: ");
+    scanf("%d", &n);
+    for(i=1; i<=n; i++)
+    {
+        temp=temp*num;
+    }
+    printf("num^n= %d", temp);
+    return 0;
+}
