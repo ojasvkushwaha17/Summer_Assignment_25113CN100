@@ -1,0 +1,22 @@
+#include <stdio.h>
+int reverse=0;
+int reversenum(int num)
+{
+    if(num==0)
+    {
+        return reverse;
+    }
+    else
+    {
+        reverse=reverse*10+(num%10);
+        return reversenum(num/10);
+    }
+}
+int main()
+{
+    int num;
+    printf("enter the number: ");
+    scanf("%d", &num);
+    printf("reverse= %d\t", reversenum(num));
+    return 0;
+}
