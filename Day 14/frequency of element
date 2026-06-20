@@ -1,0 +1,23 @@
+#include <stdio.h>
+int main()
+{
+    int n, i, array[100], item, freq=0;
+    printf("Enter number of elements in array: ");
+    scanf("%d", &n);
+    printf("Enter %d elements:\n", n);
+    for(i=0; i<n; i++)
+    {
+        scanf("%d", &array[i]);
+    }
+    printf("enter item to be searched in array: ");
+    scanf("%d", &item);
+    for(i=0; i<n; i++)
+    {
+        if(array[i]==item)
+        {
+            freq++;
+        }
+    }
+    printf("frequency of %d is= %d\n", item, freq);
+    return 0;
+}
