@@ -1,0 +1,30 @@
+#include <stdio.h>
+int main() {
+    int i, j, k, n;
+    printf("enter size of array: ");
+    scanf("%d", &n);
+    int array[n];
+    printf("enter elements of array: \n");
+    for(i=0; i<n; i++)
+    {
+        scanf("%d", &array[i]);
+    }
+    for(i=0; i<n; i++)
+    {
+        for(j=i+1; j<n; j++)
+        {
+            if(array[i]==array[j])
+            {
+                for(k=j; k<n-1; k++)
+                array[k]=array[k+1];
+                n--;
+                j--;
+            }
+        }
+    }
+    printf("new array with reduced size: \n");
+    for(i=0; i<n; i++)
+    printf("%d\n", array[i]);
+    printf("new size: %d", n);
+    return 0;
+}
