@@ -1,0 +1,31 @@
+#include<stdio.h>
+int main()
+{
+    int n, i, j, target, found=0;
+    printf("enter size of array: ");
+    scanf("%d", &n);
+    int array[n];
+    printf("enter target: ");
+    scanf("%d", &target);
+    printf("enter elements of array: \n");
+    for(i=0; i<n; i++)
+    {
+        scanf("%d", &array[i]);
+    }
+    for(i=0; i<n; i++)
+    {
+        for(j=i+1; j<n; j++)
+        {
+            if(array[j]+array[i]==target)
+            {
+                found=1;
+                printf("pairs with sum %d: (%d, %d\n), target, array[i], array[j]);
+            }
+        }
+    }
+    if(found==0)
+    {
+        printf("no pair found.");
+    }
+    return 0;
+}
