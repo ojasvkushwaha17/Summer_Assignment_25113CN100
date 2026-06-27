@@ -1,0 +1,32 @@
+#include <stdio.h>
+int main()
+{
+    int mat[25][25], n, i, j, Lsum=0, Rsum=0;
+    printf("Enter dimension of square matrix: \n");
+    scanf("%d", &n);
+    printf("Enter elements of matrix:\n");
+    for(i=0; i<n; i++) 
+    {
+        for(j=0; j<n; j++) 
+        {
+            scanf("%d", &mat[i][j]);
+        }
+    }
+    for(i=0; i<n; i++) 
+    {
+        for(j=0; j<n; j++) 
+        {
+            if(i==j)
+            {
+                Lsum=Lsum+mat[i][j];
+            }
+            if(i+j==(n-1))
+            {
+                Rsum=Rsum+mat[i][j];
+            }
+        }
+    }
+    printf("sum of left diagonal elements of matrix: %d\n", Lsum);
+    printf("sum of right diagonal elements of matrix: %d", Rsum);
+    return 0;
+}
