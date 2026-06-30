@@ -1,0 +1,72 @@
+#include <stdio.h>
+struct Student
+{
+    int rollno;
+    char name[50];
+    int age;
+    char course[50];
+    float cgpa;
+};
+
+int main()
+{
+    int n;
+    printf("Enter number of students: ");
+    scanf("%d",&n);
+    
+    struct Student s[n];
+    for(int i=1; i<=n; i++)
+    {
+        printf("student %d\n", i);
+        
+        printf("enter roll number: ");
+        scanf("%d", &s[i].rollno);
+        
+        printf("Enter Name: ");
+        scanf("%s",&s[i].name);
+        
+        printf("Enter age: ");
+        scanf("%d",&s[i].age);
+        
+        printf("Enter course: ");
+        scanf("%s",&s[i].course);
+        
+        printf("Enter cgpa: ");
+        scanf("%f",&s[i].cgpa);
+    }
+    
+    printf("\n===== STUDENT RECORDS =====\n");
+    for(int i=1;i<=n;i++)
+    {
+        printf("\nRoll Number: %d",s[i].rollno);
+        printf("\nName: %s",s[i].name);
+        printf("\nAge: %d",s[i].age);
+        printf("\nCourse: %s",s[i].course);
+        printf("\nCGPA: %.2f\n",s[i].cgpa);
+    }
+    int searchRoll;
+    int found = 0;
+
+    printf("\nEnter roll number to search: ");
+    scanf("%d",&searchRoll);
+
+    for(int i=1;i<=n;i++)
+    {
+        if(s[i].rollno == searchRoll)
+        {
+            printf("\nStudent Found!\n");
+            printf("Name: %s",s[i].name);
+            printf("\nAge: %d",s[i].age);
+            printf("\nCourse: %s",s[i].course);
+            printf("\nCGPA: %.2f\n",s[i].cgpa);
+
+            found = 1;
+            break;
+        }
+    }
+    if(found == 0)
+    {
+        printf("Student not found.\n");
+    }
+    return 0;
+}
