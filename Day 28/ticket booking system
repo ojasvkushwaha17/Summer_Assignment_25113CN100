@@ -32,7 +32,7 @@ int main()
         scanf("%d",&T[i].Ticket_price);
 
         printf("Enter Booking status: ");
-        scanf(" %[^\n]",T[i].Booking_Status);
+        scanf(" %s]",T[i].Booking_Status);
     }
 
     printf("\n=====TICKET RECORD=====\n");
