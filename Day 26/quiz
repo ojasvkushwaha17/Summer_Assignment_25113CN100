@@ -1,0 +1,63 @@
+#include <stdio.h>
+int main()
+{
+    int answer, score = 0;
+    printf("===== QUIZ APPLICATION =====\n");
+
+    // Question 1
+    printf("1. What is the capital of India?\n");
+    printf("1. Mumbai\n2. New Delhi\n3. Kolkata\n4. Chennai\n");
+    printf("Enter your answer (1-4): ");
+    scanf("%d", &answer);
+    if (answer == 2)
+    {
+        printf("Correct!\n");
+        score++;
+    }
+    else
+    {
+        printf("Wrong! Correct answer is New Delhi.\n");
+    }
+
+    // Question 2
+    printf("2. Which language is used for system programming?\n");
+    printf("1. HTML\n2. CSS\n3. C\n4. SQL\n");
+    printf("Enter your answer (1-4): ");
+    scanf("%d", &answer);
+    if (answer == 3)
+    {
+        printf("Correct!\n\n");
+        score++;
+    }
+    else
+    {
+        printf("Wrong! Correct answer is C.\n\n");
+    }
+
+    // Question 3
+    printf("3. Who is known as the Father of Computers?\n");
+    printf("1. Charles Babbage\n2. Alan Turing\n3. Bill Gates\n4. Steve Jobs\n");
+    printf("Enter your answer (1-4): ");
+    scanf("%d", &answer);
+    if (answer == 1)
+    {
+        printf("Correct!\n\n");
+        score++;
+    }
+    else
+    {
+        printf("Wrong! Correct answer is Charles Babbage.\n\n");
+    }
+
+    // Display result
+    printf("===== QUIZ RESULT =====\n");
+    printf("Your score is: %d/3\n", score);
+
+    if (score == 3)
+        printf("Excellent Performance!\n");
+    else if (score == 2)
+        printf("Good Performance!\n");
+    else
+        printf("Keep Practicing!\n");
+    return 0;
+}
